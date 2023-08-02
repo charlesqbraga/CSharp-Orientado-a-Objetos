@@ -4,13 +4,20 @@
     public string Artista { get; set; }
     public int Duracao { get; set; }
     public bool Disponivel { get; set; }
+    public string DescricaoResumida 
+    {
+        get
+        {
+            return $"A música {Nome} pertence à banda {Artista}.";
+        }
+    }
 
     public void ExibirFichaTecnica()
     {
         Console.WriteLine($"\nNome: {Nome}");
         Console.WriteLine($"Artista: {Artista}");
         Console.WriteLine($"Duração: {Duracao}");
-        if (disponivel)
+        if (Disponivel)
         {
             Console.WriteLine("Disponivel no plano.");
         } else {
